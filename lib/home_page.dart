@@ -25,17 +25,18 @@ class _MyHomePageState extends State<MyHomePage> {
             )
           ],
         ),
-        body: ListView(
-          children: <Widget>[
-            ListTile(
-              leading: CircleAvatar(
-                backgroundImage: NetworkImage(
-                    'https://i.pinimg.com/originals/0a/a1/73/0aa17332fae30bd1760cdc4993a71f66.jpg'),
-              ),
-              title: Text('Neymar'),
-            ),
-          ],
-        ),
+        body: ListView.separated(
+            itemCount: 3,
+            separatorBuilder: (context, index) => Divider(),
+            itemBuilder: (context, index) {
+              return ListTile(
+                leading: CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      'https://i.pinimg.com/originals/ba/e1/ee/bae1ee1a36e65ebcfc371cb880c4d2d1.jpg'),
+                ),
+                title: Text('Russell Wilson $index'),
+              );
+            }),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           child: Icon(Icons.chat),
