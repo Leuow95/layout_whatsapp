@@ -9,14 +9,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,14 +25,16 @@ class _MyHomePageState extends State<MyHomePage> {
             )
           ],
         ),
-        body: Container(
-          child: Column(
-            children: <Widget>[
-              ListView(
-                children: [],
+        body: ListView(
+          children: <Widget>[
+            ListTile(
+              leading: CircleAvatar(
+                backgroundImage: NetworkImage(
+                    'https://i.pinimg.com/originals/0a/a1/73/0aa17332fae30bd1760cdc4993a71f66.jpg'),
               ),
-            ],
-          ),
+              title: Text('Neymar'),
+            ),
+          ],
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
