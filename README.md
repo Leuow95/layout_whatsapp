@@ -2,7 +2,7 @@
 
 This project was created to clone the Whatsapp interface.
 
-<img src=”layout_whatsapp\assets\Layout_Whatsapp.jpeg”>
+<img src=”\assets\Layout_Whatsapp.jpeg”>
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
