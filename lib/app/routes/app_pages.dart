@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 import 'package:layout_whatsapp/app/modules/home/bindings/home_binding.dart';
-import 'package:layout_whatsapp/app/modules/home/views/home_view.dart';
+import 'package:layout_whatsapp/app/modules/home/views/chats_view.dart';
 
 part 'app_routes.dart';
 
@@ -13,8 +13,8 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () => HomeView(),
-      binding: HomeBinding(),
+      page: () => ChatsView(),
+      binding: ChatsBinding(),
     ),
   ];
 }

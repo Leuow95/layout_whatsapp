@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/home_controller.dart';
+import '../controllers/chats_controller.dart';
 
-class HomeView extends GetView<HomeController> {
+class ChatsView extends GetView<ChatsController> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
+      initialIndex: 1,
       length: 4,
       child: Scaffold(
           appBar: AppBar(
@@ -36,18 +37,14 @@ class HomeView extends GetView<HomeController> {
               )
             ],
           ),
-          body: ListView.separated(
-              itemCount: 3,
-              separatorBuilder: (context, index) => Divider(),
-              itemBuilder: (context, index) {
-                return ListTile(
-                  leading: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        'https://i.pinimg.com/originals/ba/e1/ee/bae1ee1a36e65ebcfc371cb880c4d2d1.jpg'),
-                  ),
-                  title: Text('Russell Wilson $index'),
-                );
-              }),
+          body: TabBarView(
+            children: [
+              Conversas(),
+              Conversas(),
+              Conversas(),
+              Conversas(),
+            ],
+          ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {},
             child: Icon(Icons.chat),
@@ -55,5 +52,27 @@ class HomeView extends GetView<HomeController> {
           ) // This trailing comma makes auto-formatting nicer for build methods.
           ),
     );
+  }
+}
+
+class Conversas extends StatelessWidget {
+  const Conversas({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.separated(
+        itemCount: 3,
+        separatorBuilder: (context, index) => Divider(),
+        itemBuilder: (context, index) {
+          return ListTile(
+            leading: CircleAvatar(
+              backgroundImage: NetworkImage(
+                  'https://i.pinimg.com/originals/ba/e1/ee/bae1ee1a36e65ebcfc371cb880c4d2d1.jpg'),
+            ),
+            title: Text('Russell Wilson $index'),
+          );
+        });
   }
 }
