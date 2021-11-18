@@ -42,13 +42,13 @@ class ChatsView extends GetView<ChatsController> {
               Conversas(),
               Conversas(),
               Conversas(),
-              Conversas(),
+              Container(),
             ],
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {},
             child: Icon(Icons.chat),
-            backgroundColor: Theme.of(context).accentColor,
+            backgroundColor: Theme.of(context).colorScheme.secondary,
           ) // This trailing comma makes auto-formatting nicer for build methods.
           ),
     );
