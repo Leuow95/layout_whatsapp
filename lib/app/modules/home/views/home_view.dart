@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
+import 'package:get/get.dart';
 
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
+import '../controllers/home_controller.dart';
 
-class _MyHomePageState extends State<MyHomePage> {
+class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -28,7 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Tab(text: 'CHAMADAS'),
               ],
             ),
-            title: Text(widget.title),
+            title: Text('WHATSAPP'),
             actions: [
               IconButton(
                 icon: Icon(Icons.search),
