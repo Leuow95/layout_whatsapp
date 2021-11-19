@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
-import '../controllers/chats_controller.dart';
+import 'package:layout_whatsapp/app/modules/camera/camera_view.dart';
+import 'package:layout_whatsapp/app/modules/home/widgets/chats_widget.dart';
+import 'chats_controller.dart';
+// import 'package:layout_whatsapp/app/modules/home/chats_binding.dart';
 
 class ChatsView extends GetView<ChatsController> {
+  // final _chatsController = Get.put(ChatsController());
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -25,7 +28,7 @@ class ChatsView extends GetView<ChatsController> {
                 Tab(text: 'CHAMADAS'),
               ],
             ),
-            title: Text('WHATSAPP'),
+            title: Text('WhatsApp'),
             actions: [
               IconButton(
                 icon: Icon(Icons.search),
@@ -39,40 +42,18 @@ class ChatsView extends GetView<ChatsController> {
           ),
           body: TabBarView(
             children: [
-              Conversas(),
-              Conversas(),
-              Conversas(),
+              CameraView(),
+              Chats(),
+              Chats(),
               Container(),
             ],
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {},
             child: Icon(Icons.chat),
-            backgroundColor: Theme.of(context).colorScheme.secondary,
+            backgroundColor: Color(0xff075E54),
           ) // This trailing comma makes auto-formatting nicer for build methods.
           ),
     );
-  }
-}
-
-class Conversas extends StatelessWidget {
-  const Conversas({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.separated(
-        itemCount: 3,
-        separatorBuilder: (context, index) => Divider(),
-        itemBuilder: (context, index) {
-          return ListTile(
-            leading: CircleAvatar(
-              backgroundImage: NetworkImage(
-                  'https://i.pinimg.com/originals/ba/e1/ee/bae1ee1a36e65ebcfc371cb880c4d2d1.jpg'),
-            ),
-            title: Text('Russell Wilson $index'),
-          );
-        });
   }
 }

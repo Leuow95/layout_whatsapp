@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import 'package:layout_whatsapp/app/modules/camera/bindings/camera_binding.dart';
-import 'package:layout_whatsapp/app/modules/camera/views/camera_view.dart';
-import 'package:layout_whatsapp/app/modules/home/bindings/home_binding.dart';
-import 'package:layout_whatsapp/app/modules/home/views/chats_view.dart';
+import 'package:layout_whatsapp/app/modules/camera/camera_binding.dart';
+import 'package:layout_whatsapp/app/modules/camera/camera_view.dart';
+import 'package:layout_whatsapp/app/modules/home/chats_binding.dart';
+import 'package:layout_whatsapp/app/modules/home/chats_view.dart';
 
 part 'app_routes.dart';
 
