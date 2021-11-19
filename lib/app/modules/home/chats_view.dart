@@ -14,46 +14,46 @@ class ChatsView extends GetView<ChatsController> {
       initialIndex: 1,
       length: 4,
       child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Color(0xff075E54),
-            bottom: TabBar(
-              indicatorColor: Colors.white,
-              isScrollable: true,
-              tabs: [
-                Tab(
-                  icon: Icon(Icons.camera_alt),
-                ),
-                Tab(text: 'CONVERSAS'),
-                Tab(text: 'STATUS'),
-                Tab(text: 'CHAMADAS'),
-              ],
-            ),
-            title: Text('WhatsApp'),
-            actions: [
-              IconButton(
-                icon: Icon(Icons.search),
-                onPressed: () {},
+        appBar: AppBar(
+          backgroundColor: Color(0xff075E54),
+          bottom: TabBar(
+            indicatorColor: Colors.white,
+            isScrollable: true,
+            tabs: [
+              Tab(
+                icon: Icon(Icons.camera_alt),
               ),
-              IconButton(
-                icon: Icon(Icons.more_vert),
-                onPressed: () {},
-              )
+              Tab(text: 'CONVERSAS'),
+              Tab(text: 'STATUS'),
+              Tab(text: 'CHAMADAS'),
             ],
           ),
-          body: TabBarView(
-            children: [
-              CameraView(),
-              Chats(),
-              Chats(),
-              Container(),
-            ],
-          ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {},
-            child: Icon(Icons.chat),
-            backgroundColor: Color(0xff075E54),
-          ) // This trailing comma makes auto-formatting nicer for build methods.
-          ),
+          title: Text('WhatsApp'),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(Icons.more_vert),
+              onPressed: () {},
+            )
+          ],
+        ),
+        body: TabBarView(
+          children: [
+            CameraView(),
+            Chats(),
+            Chats(),
+            Container(),
+          ],
+        ),
+        // floatingActionButton: FloatingActionButton(
+        //   onPressed: () {},
+        //   child: Icon(Icons.chat),
+        //   backgroundColor: Color(0xff075E54),
+        // ) // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }
