@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:layout_whatsapp/app/modules/camera/camera_view.dart';
-import 'package:layout_whatsapp/app/modules/home/widgets/chats_widget.dart';
+// import 'package:layout_whatsapp/app/modules/home/widgets/chats_widget.dart';
 import 'chats_controller.dart';
 // import 'package:layout_whatsapp/app/modules/home/chats_binding.dart';
 
@@ -42,9 +41,14 @@ class ChatsView extends GetView<ChatsController> {
         ),
         body: TabBarView(
           children: [
-            CameraView(),
-            Chats(),
-            Chats(),
+            // CameraView(),
+            // CameraView(),
+            // CameraView(),
+            // Chats(),
+            // Chats(),
+            Container(),
+            Container(),
+            Container(),
             Container(),
           ],
         ),
